@@ -3,7 +3,7 @@
 //		http://www.StudyTroll.com
 // 		written by Michael Fischthal
 //		art by Amelia Altavena and Micheline Hess
-//			March 2010
+//			April 2010
 //
 //  This work is licensed under a Creative Commons License: http://creativecommons.org/licenses/by-nc-sa/3.0/
 
