@@ -1,9 +1,8 @@
-//
 //  Study Troll Jetpack V1.0
-//		http://www.StudyTroll.com
+//		http://www.studytroll.org
 // 		written by Michael Fischthal
 //		art by Amelia Altavena and Micheline Hess
-//			April 2010
+//			March 2010
 //
 //  This work is licensed under a Creative Commons License: http://creativecommons.org/licenses/by-nc-sa/3.0/
 
@@ -56,14 +55,14 @@ var startingFact =
     keyWords: ["2", "16"],
     right: 0,
     wrong: 0,
-    source: "http://www.StudyTroll.com",
+    source: "http://www.studytroll.org",
     active: 1,
     id: 0
 }
 
 //About me page and pagemods
 var manifest = {
-    firstRunPage: "http://www.studytroll.com/aboutMe.html",
+    firstRunPage: "http://www.studytroll.org/aboutMe.html",
 };
 var options = {};
 options.matches = ["http://www.quizlet.com/*/", "http://quizlet.com/*/"];
@@ -103,11 +102,11 @@ jetpack.statusBar.append({
         addStylesToPage(jetpack.tabs.focused.contentDocument);
         initFactList();
 		if (MODE=="ON") {
-			$("#statusbar", widget).html("<img src='http://www.studytroll.com/imgs/on.gif' alt='StudyTroll:ON' title='Quizzing is ON'>");
+			$("#statusbar", widget).html("<img src='http://www.studytroll.org/imgs/on.gif' alt='StudyTroll:ON' title='Quizzing is ON'>");
 		} else if (MODE=="OFF") {
-			$("#statusbar", widget).html("<img src='http://www.studytroll.com/imgs/off.png' alt='StudyTroll:OFF' title='Quizzing is OFF'>");
+			$("#statusbar", widget).html("<img src='http://www.studytroll.org/imgs/off.png' alt='StudyTroll:OFF' title='Quizzing is OFF'>");
 		} else if (MODE=="WARNING") {
-			$("#statusbar", widget).html("<img src='http://www.studytroll.com/imgs/warning.gif?" + rndNum + "' title='The Troll is coming!'");
+			$("#statusbar", widget).html("<img src='http://www.studytroll.org/imgs/warning.gif?" + rndNum + "' title='The Troll is coming!'");
 		}
 		$(widget).hover(
         function() {
@@ -117,11 +116,11 @@ jetpack.statusBar.append({
         },
         function() {
             if (MODE=="ON") {
-				$("#statusbar", widget).html("<img src='http://www.studytroll.com/imgs/on.gif' alt='StudyTroll:ON' title='Quizzing is ON'>");
+				$("#statusbar", widget).html("<img src='http://www.studytroll.org/imgs/on.gif' alt='StudyTroll:ON' title='Quizzing is ON'>");
 			} else if (MODE=="OFF") {
-				$("#statusbar", widget).html("<img src='http://www.studytroll.com/imgs/off.png' alt='StudyTroll:OFF' title='Quizzing is OFF'>");
+				$("#statusbar", widget).html("<img src='http://www.studytroll.org/imgs/off.png' alt='StudyTroll:OFF' title='Quizzing is OFF'>");
 			} else if (MODE=="WARNING") {
-				$("#statusbar", widget).html("<img src='http://www.studytroll.com/imgs/warning.gif?" + rndNum + "' title='The Troll is coming!'");
+				$("#statusbar", widget).html("<img src='http://www.studytroll.org/imgs/warning.gif?" + rndNum + "' title='The Troll is coming!'");
 			}	
         }
         );
@@ -140,11 +139,11 @@ jetpack.statusBar.append({
                 console.log("CLICK- turning off troll");
             }
 			if (MODE=="ON") {
-				$("#statusbar", widget).html("<img src='http://www.studytroll.com/imgs/on.gif' alt='StudyTroll:ON' title='Quizzing is ON'>");
+				$("#statusbar", widget).html("<img src='http://www.studytroll.org/imgs/on.gif' alt='StudyTroll:ON' title='Quizzing is ON'>");
 			} else if (MODE=="OFF") {
-				$("#statusbar", widget).html("<img src='http://www.studytroll.com/imgs/off.png' alt='StudyTroll:OFF' title='Quizzing is OFF'>");
+				$("#statusbar", widget).html("<img src='http://www.studytroll.org/imgs/off.png' alt='StudyTroll:OFF' title='Quizzing is OFF'>");
 			} else if (MODE=="WARNING") {
-				$("#statusbar", widget).html("<img src='http://www.studytroll.com/imgs/warning.gif?" + rndNum + "' title='The Troll is coming!'");
+				$("#statusbar", widget).html("<img src='http://www.studytroll.org/imgs/warning.gif?" + rndNum + "' title='The Troll is coming!'");
 			}
         });
     }
@@ -155,7 +154,7 @@ jetpack.slideBar.append({
     html: <html > <head > </head><body bgcolor="#DDDDDD">
 	      	<div id="trollSlideBarContent">
 			</div > </body></html > ,
-    icon: "http://www.studytroll.com/imgs/troll_ico.png",
+    icon: "http://www.studytroll.org/imgs/troll_ico.png",
     width: 430,
     persist: false,
     onClick: function(slide) {
@@ -168,7 +167,7 @@ jetpack.slideBar.append({
 //Update the contents of the slidebar
 function updateSlideBarContents(slide) {
 
-    var myTable = "<div id='settingsBtn' style='font-size:10pt;text-align:right;cursor:pointer;color:blue;font-family:arial,helvetica,geneva,swiss'><img src='http://www.studytroll.com/imgs/settingsBtn.png' border=0 align=absbottom> <span style='text-decoration:underline;'>SETTINGS</span></div><div id='settings' style='display:none' visible='false'>"+settingsHTML+"</div>";
+    var myTable = "<div id='settingsBtn' style='font-size:10pt;text-align:right;cursor:pointer;color:blue;font-family:arial,helvetica,geneva,swiss'><img src='http://www.studytroll.org/imgs/settingsBtn.png' border=0 align=absbottom> <span style='text-decoration:underline;'>SETTINGS</span></div><div id='settings' style='display:none' visible='false'>"+settingsHTML+"</div>";
 	myTable += "<table border=\"0\" cellspacing=\"0\" cellpadding=\"7\" style=\"font-family:arial,helvetica,geneva,swiss;font-size:10pt;margin-top:5px\">";
     myTable += "<tr style=\"background:rgb(208,208,208)\">";
     myTable += "<th width=\"40\">ON/OFF</th>";
@@ -191,18 +190,18 @@ function updateSlideBarContents(slide) {
         if (i % 2 == 0) myTable += "<tr style=\"background:rgb(235,235,235)\">";
         else myTable += "<tr>";
         if (myStorage.myFacts[i].active == 1) {
-            myTable += "<td align=\"center\"><div class=\"onToggleBtn\" style=\"color:black;text-decoration:none;font-size:8pt;cursor:pointer\" num=\"" + i + "\"><img src=\"http://www.studytroll.com/imgs/lightOn.png\" border=0></div></td>";
+            myTable += "<td align=\"center\"><div class=\"onToggleBtn\" style=\"color:black;text-decoration:none;font-size:8pt;cursor:pointer\" num=\"" + i + "\"><img src=\"http://www.studytroll.org/imgs/lightOn.png\" border=0></div></td>";
         } else {
-            myTable += "<td align=\"center\"><div class=\"onToggleBtn\" style=\"color:black;text-decoration:none;font-size:8pt;cursor:pointer\" num=\"" + i + "\"><img src=\"http://www.studytroll.com/imgs/lightOff.png\" border=0></div></td>";
+            myTable += "<td align=\"center\"><div class=\"onToggleBtn\" style=\"color:black;text-decoration:none;font-size:8pt;cursor:pointer\" num=\"" + i + "\"><img src=\"http://www.studytroll.org/imgs/lightOff.png\" border=0></div></td>";
         }
         myTable += "<td>" + printText + "<br><span style=\"font-size:7pt\"><a target=\"new\" href=\"" + myStorage.myFacts[i].source + "\">(FROM: " + myStorage.myFacts[i].source.substr(6) + ")</a></span></td>";
         myTable += "<td align=\"center\">" + myStorage.myFacts[i].right + " / " + (parseInt(myStorage.myFacts[i].right) + parseInt(myStorage.myFacts[i].wrong)) + "</td>";
-        myTable += "<td align=\"center\"><div class=\"editBtn\" style=\"color:black;text-decoration:none;font-size:8pt;cursor:pointer\" num=\"" + i + "\"><img src=\"http://www.studytroll.com/imgs/edit_ico.png\" title=\"Edit Fact\" border=0 align=absbottom></div></td>";
-        myTable += "<td align=\"center\"><div class=\"removeBtn\" style=\"color:black;text-decoration:none;font-size:8pt;cursor:pointer\" num=\"" + i + "\"><img src=\"http://www.studytroll.com/imgs/delete_ico.png\" title=\"Remove Fact\" border=0 align=absbottom></div></td>";
+        myTable += "<td align=\"center\"><div class=\"editBtn\" style=\"color:black;text-decoration:none;font-size:8pt;cursor:pointer\" num=\"" + i + "\"><img src=\"http://www.studytroll.org/imgs/edit_ico.png\" title=\"Edit Fact\" border=0 align=absbottom></div></td>";
+        myTable += "<td align=\"center\"><div class=\"removeBtn\" style=\"color:black;text-decoration:none;font-size:8pt;cursor:pointer\" num=\"" + i + "\"><img src=\"http://www.studytroll.org/imgs/delete_ico.png\" title=\"Remove Fact\" border=0 align=absbottom></div></td>";
         myTable += "</tr>";
     }
     myTable += "</table>";
-	myTable += "<div id='exportBtn' style='cursor:pointer;position:relative;font-size:10pt;font-family:arial,helvetica,geneva,swiss;color:blue;margin-top:5px' align='right'><img src='http://www.studytroll.com/imgs/export.png' border=0 align=absbottom> <span style='text-decoration:underline;'>EXPORT</span></div>"
+	myTable += "<div id='exportBtn' style='cursor:pointer;position:relative;font-size:10pt;font-family:arial,helvetica,geneva,swiss;color:blue;margin-top:5px' align='right'><img src='http://www.studytroll.org/imgs/export.png' border=0 align=absbottom> <span style='text-decoration:underline;'>EXPORT</span></div>"
     var doc = slide.contentDocument;
     $("#trollSlideBarContent", doc).html(myTable);
 	$(".copyProt", slide.contentDocument).bind("click",
@@ -704,17 +703,17 @@ function addStylesToPage(doc) {
         //preload images
         preload_image_object = doc.createElement("img");
         image_url = [];
-        image_url[0] = "http://www.studytroll.com/imgs/cracks.png";
+        image_url[0] = "http://www.studytroll.org/imgs/cracks.png";
         image_url[1] = "";
-        image_url[2] = "http://www.studytroll.com/imgs/popupBG.png";
-        image_url[3] = "http://www.studytroll.com/imgs/hintBtn.png";
-        image_url[4] = "http://www.studytroll.com/imgs/guessBtn.png";
-        image_url[5] = "http://www.studytroll.com/imgs/bigbone.png";
-        image_url[6] = "http://www.studytroll.com/imgs/meatBone.png";
-        image_url[7] = "http://www.studytroll.com/imgs/troll_animate.gif";
-        image_url[8] = "http://www.studytroll.com/imgs/warning.gif";
-        image_url[9] = "http://www.studytroll.com/imgs/goatBG.png";
-        image_url[9] = "http://www.studytroll.com/imgs/goatClose.png";
+        image_url[2] = "http://www.studytroll.org/imgs/popupBG.png";
+        image_url[3] = "http://www.studytroll.org/imgs/hintBtn.png";
+        image_url[4] = "http://www.studytroll.org/imgs/guessBtn.png";
+        image_url[5] = "http://www.studytroll.org/imgs/bigbone.png";
+        image_url[6] = "http://www.studytroll.org/imgs/meatBone.png";
+        image_url[7] = "http://www.studytroll.org/imgs/troll_animate.gif";
+        image_url[8] = "http://www.studytroll.org/imgs/warning.gif";
+        image_url[9] = "http://www.studytroll.org/imgs/goatBG.png";
+        image_url[9] = "http://www.studytroll.org/imgs/goatClose.png";
 
         var i = 0;
         for (i = 0; i <= 9; i++) preload_image_object.src = image_url[i];
@@ -861,7 +860,6 @@ function quizletListAvailable(document){
 
 function importJSON(thisURL) {
 	var match = thisURL.match(/\d+(?=\/)/g);
-	//below uses this projects personal API key for quizlet.  please do not copy.
 	$.get('http://quizlet.com/api/1.0/sets?dev_key=5ebwdpi53f0o8ssc&q=ids:'+match[0]+'&extended=on', function(jsonString) {
 		jsObject = JSON.parse(jsonString);
 		var newData = [];
@@ -964,7 +962,7 @@ function startTimer() {
 	}
     console.log("timer started");
     MODE = "ON";
-    $("#statusbar", myStatusObj).html("<img src='http://www.studytroll.com/imgs/on.gif' alt='StudyTroll:ON' title='Quizzing is ON'>");
+    $("#statusbar", myStatusObj).html("<img src='http://www.studytroll.org/imgs/on.gif' alt='StudyTroll:ON' title='Quizzing is ON'>");
 }
 
 //While the Troll is on, this is fired at a set interval to display a reminder of the stored facts
@@ -987,7 +985,7 @@ function stopTimer() {
     clearTimeout(warningTimer);
     clearTimeout(reminderTimer);
     MODE = "OFF";
-    $("#statusbar", myStatusObj).html("<img src='http://www.studytroll.com/imgs/off.png' alt='StudyTroll:OFF' title='Quizzing is OFF'>");
+    $("#statusbar", myStatusObj).html("<img src='http://www.studytroll.org/imgs/off.png' alt='StudyTroll:OFF' title='Quizzing is OFF'>");
 }
 
 //Called 6 seconds before the Troll will appear.  If there are active facts the statusbar will go into warning mode
@@ -1001,7 +999,7 @@ function readyTroll() {
         //To prevent the animated GIF from cacheing (and thus not starting at frame 1 each time)
         //the image is loaded with a different random query number each time.
         var rndNum = Math.floor(Math.random() * 1000000);
-        $("#statusbar", myStatusObj).html("<img src='http://www.studytroll.com/imgs/warning.gif?" + rndNum + "'  title='The Troll is coming!'");
+        $("#statusbar", myStatusObj).html("<img src='http://www.studytroll.org/imgs/warning.gif?" + rndNum + "'  title='The Troll is coming!'");
         warningTimer = setTimeout(activateTroll, warningTimerLength);
     }
 }
@@ -1011,7 +1009,7 @@ function activateTroll() {
     quizActive = true;
     //The styles must be added at this point in case the user switched tabs/windows
     addStylesToPage(jetpack.tabs.focused.contentDocument);
-    $("#statusbar", myStatusObj).html("<img src='http://www.studytroll.com/imgs/warningOver.png' alt='StudyTroll:QUIZ' title='Quizzing is ON'>");
+    $("#statusbar", myStatusObj).html("<img src='http://www.studytroll.org/imgs/warningOver.png' alt='StudyTroll:QUIZ' title='Quizzing is ON'>");
     MODE = "ON";
     //Previous counts are reset
     currLetter = 0;
@@ -1442,7 +1440,7 @@ jetpack.menu.context.page.add(new jetpack.Menu({
 jetpack.menu.context.page.add(
 {
     label: "FEED to Troll",
-    icon: "http://www.studytroll.com/imgs/troll_ico.png",
+    icon: "http://www.studytroll.org/imgs/troll_ico.png",
     command: function(menuitem) {
         jetpack.tabs.onReady(addStylesToPage);
         currDoc = jetpack.tabs.focused.contentDocument;
@@ -1568,7 +1566,7 @@ stylesObj.smallDisplayText = "font-family:arial,helvetica,geneva,swiss;font-size
 
 var guessBtn = currDoc.createElement("div");
 guessBtn.id = "guessBtn";
-guessBtn.style.background = "url(http://www.studytroll.com/imgs/guessBtn.png)";
+guessBtn.style.background = "url(http://www.studytroll.org/imgs/guessBtn.png)";
 guessBtn.style.width = "138px";
 guessBtn.style.height = "53px";
 guessBtn.style.position = "absolute";
@@ -1578,7 +1576,7 @@ guessBtn.style.backgroundPosition = "0px -53px";
 
 var hintBtn = currDoc.createElement("div");
 hintBtn.id = "hintBtn";
-hintBtn.style.background = "url(http://www.studytroll.com/imgs/hintBtn.png)";
+hintBtn.style.background = "url(http://www.studytroll.org/imgs/hintBtn.png)";
 hintBtn.style.width = "138px";
 hintBtn.style.height = "53px";
 hintBtn.style.position = "absolute";
@@ -1588,7 +1586,7 @@ hintBtn.style.backgroundPosition = "0px 0px";
 
 var popup = currDoc.createElement("div");
 popup.id = "popup";
-popup.style.background = "url(http://www.studytroll.com/imgs/goatBG.png)";
+popup.style.background = "url(http://www.studytroll.org/imgs/goatBG.png)";
 popup.style.position = "fixed";
 popup.style.left = "50%";
 popup.style.top = "50%";
@@ -1623,7 +1621,7 @@ smallPopup.style.fontVariant = "small-caps";
 
 var closeBtn = currDoc.createElement("div");
 closeBtn.id = "trollCloseBtn";
-closeBtn.style.background = "url(http://www.studytroll.com/imgs/closeBtn.png) no-repeat 0 0";
+closeBtn.style.background = "url(http://www.studytroll.org/imgs/closeBtn.png) no-repeat 0 0";
 closeBtn.style.position = "relative";
 closeBtn.style.left = "660px";
 closeBtn.style.top = "120px";
@@ -1633,7 +1631,7 @@ closeBtn.style.display = "block";
 
 var trollDrop = currDoc.createElement("div");
 trollDrop.id = "troll";
-trollDrop.style.background = "url(http://www.studytroll.com/imgs/troll_animate.gif)";
+trollDrop.style.background = "url(http://www.studytroll.org/imgs/troll_animate.gif)";
 trollDrop.style.position = "fixed";
 trollDrop.style.left = "80px";
 trollDrop.style.top = "0px";
@@ -1669,7 +1667,7 @@ bgFade.style.width = "2500px";
 
 var cracksL = currDoc.createElement("div");
 cracksL.id = "cracksL";
-cracksL.style.background = "url(http://www.studytroll.com/imgs/cracks.png)";
+cracksL.style.background = "url(http://www.studytroll.org/imgs/cracks.png)";
 cracksL.style.position = "absolute";
 cracksL.style.left = "0px";
 cracksL.style.top = "0px";
@@ -1681,7 +1679,7 @@ cracksL.style.backgroundPosition = "0px 0px";
 
 var cracksR = currDoc.createElement("div");
 cracksR.id = "cracksR";
-cracksR.style.background = "url(http://www.studytroll.com/imgs/cracks.png)";
+cracksR.style.background = "url(http://www.studytroll.org/imgs/cracks.png)";
 cracksR.style.position = "absolute";
 cracksR.style.right = "0px";
 cracksR.style.top = "0px";
@@ -1693,7 +1691,7 @@ cracksR.style.backgroundPosition = "-320px 0px";
 
 var bigBone = currDoc.createElement("div");
 bigBone.id = "bigBone";
-bigBone.style.background = "url(http://www.studytroll.com/imgs/bigbone.png)";
+bigBone.style.background = "url(http://www.studytroll.org/imgs/bigbone.png)";
 bigBone.style.position = "fixed";
 bigBone.style.right = "80px";
 bigBone.style.top = "-210px";
@@ -1713,7 +1711,7 @@ boneCopy.style.fontSize = "10pt !important";
 
 var boneCloseBtn = currDoc.createElement("div");
 boneCloseBtn.id = "boneCloseBtn";
-boneCloseBtn.style.background = "url(http://www.studytroll.com/imgs/closeBtn.png) no-repeat 0 0";
+boneCloseBtn.style.background = "url(http://www.studytroll.org/imgs/closeBtn.png) no-repeat 0 0";
 boneCloseBtn.style.position = "relative";
 boneCloseBtn.style.left = "630px";
 boneCloseBtn.style.top = "30px";
@@ -1725,7 +1723,7 @@ bigBone.appendChild(boneCopy);
 
 var meatBone = currDoc.createElement("div");
 meatBone.id = "meatBone";
-meatBone.style.background = "url(http://www.studytroll.com/imgs/meatBone.png)";
+meatBone.style.background = "url(http://www.studytroll.org/imgs/meatBone.png)";
 meatBone.style.position = "fixed";
 meatBone.style.right = "10px";
 meatBone.style.top = "-282px";
@@ -1745,7 +1743,7 @@ meatBoneCopy.style.fontSize = "10pt !important";
 
 var meatBoneCloseBtn = currDoc.createElement("div");
 meatBoneCloseBtn.id = "meatBoneCloseBtn";
-meatBoneCloseBtn.style.background = "url(http://www.studytroll.com/imgs/closeBtn.png) no-repeat 0 0";
+meatBoneCloseBtn.style.background = "url(http://www.studytroll.org/imgs/closeBtn.png) no-repeat 0 0";
 meatBoneCloseBtn.style.position = "relative";
 meatBoneCloseBtn.style.left = "595px";
 meatBoneCloseBtn.style.top = "35px";
@@ -1757,7 +1755,7 @@ meatBone.appendChild(meatBoneCopy);
 
 var trollArm = currDoc.createElement("div");
 trollArm.id = "trollArm";
-trollArm.style.background = "url(http://www.studytroll.com/imgs/trollArm.png) no-repeat 0 0";
+trollArm.style.background = "url(http://www.studytroll.org/imgs/trollArm.png) no-repeat 0 0";
 trollArm.style.position = "fixed";
 trollArm.style.zIndex = "9999";
 trollArm.style.left = "50%";
@@ -1770,7 +1768,7 @@ trollArm.style.display = "block";
 
 var microBtn = currDoc.createElement("div");
 microBtn.id = "microBtn";
-microBtn.style.background = "url(http://www.studytroll.com/imgs/troll_import.png) no-repeat 0 0";
+microBtn.style.background = "url(http://www.studytroll.org/imgs/troll_import.png) no-repeat 0 0";
 microBtn.style.backgroundColor = "rgb(180,180,180)";
 microBtn.style.position = "fixed";
 microBtn.style.zIndex = "9999";
